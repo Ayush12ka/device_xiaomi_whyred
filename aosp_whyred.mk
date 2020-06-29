@@ -26,16 +26,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+CUSTOM_BUILD_TYPE=OFFICIAL
 
 # Inherit from custom vendor
-#$(call inherit-product, vendor/MiuiCamera/config.mk)
+$(call inherit-product, vendor/MiuiCamera/config.mk)
 
-PRODUCT_NAME := arrow_whyred
+PRODUCT_NAME := aosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 5
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.pixelplusui.maintainer=Ayush😎akkar
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
