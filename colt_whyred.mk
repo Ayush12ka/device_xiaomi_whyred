@@ -29,13 +29,17 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 $(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
-PRODUCT_NAME := arrow_whyred
+PRODUCT_NAME := colt_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 5
+
+# ColtOS stuffs
+COLT_BUILD_TYPE := Official
+COLT_DEVICE_MAINTAINER := Ayush😎kakkar
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
