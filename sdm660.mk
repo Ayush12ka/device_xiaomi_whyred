@@ -172,7 +172,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0 \
-    Snap
+    #Snap
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
@@ -512,6 +512,11 @@ PRODUCT_PACKAGES += \
 # RIL JAR
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    ueventd.qcom.rc \
+    init.safailnet.rc
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
