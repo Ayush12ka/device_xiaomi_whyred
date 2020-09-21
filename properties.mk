@@ -41,3 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.iwlan.enable=true \
     persist.vendor.radio.data_con_rprt=1
+
+# ADB props
+ro.secure=1
+ro.debuggable=0
